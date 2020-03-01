@@ -10,7 +10,6 @@ namespace cw1
         static async Task Main(string[] args)
         {
             var httpClient = new HttpClient();
-            //var response = await httpClient.GetAsync(args[0]);
             var doc = await httpClient.GetStringAsync(args[0]);
             Regex emailRegex = new Regex(@"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", RegexOptions.IgnoreCase);
             MatchCollection collection = emailRegex.Matches(doc);
@@ -18,8 +17,6 @@ namespace cw1
             {
                 Console.WriteLine(match);
             }
-            //Console.WriteLine(response);
-            //Console.WriteLine(doc);
         }
     }
 }
