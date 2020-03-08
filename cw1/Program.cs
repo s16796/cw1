@@ -10,7 +10,6 @@ namespace cw1
     {
         public static async Task Main(string[] args)
         {
-            args = new[] {"https://www.pja.edu.pl/"};
             if (args == null || args.Length == 0)
             {
                 throw new ArgumentNullException();
